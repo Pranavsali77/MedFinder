@@ -327,8 +327,6 @@ http://localhost:5173
 * Hospital & Clinic Integration
 * AI Health Assistant
 * Voice-Based Medicine Search
-* Multi-Language Support
-* Emergency Medicine Locator
 * Predictive Inventory Analytics
 * Electronic Health Record Integration
 
