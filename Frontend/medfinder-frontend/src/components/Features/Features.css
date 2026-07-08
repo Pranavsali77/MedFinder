@@ -1,0 +1,115 @@
+.features {
+  padding: 100px 24px;
+  background-color: var(--bg-tertiary);
+  position: relative;
+}
+
+.features-header {
+  max-width: 700px;
+  margin: 0 auto 60px auto;
+  text-align: center;
+}
+
+.features-section-title {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.features-section-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Features Grid */
+.features-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+}
+
+.feature-card {
+  padding: 40px 30px;
+  border-radius: var(--border-radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: all var(--transition-speed) ease;
+  cursor: default;
+}
+
+/* Card hover glow and offset */
+.feature-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent-secondary);
+  box-shadow: 0 12px 30px rgba(6, 182, 212, 0.15);
+}
+
+.icon-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--border-radius-md);
+  background: var(--accent-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  transition: all var(--transition-speed) ease;
+}
+
+.feature-icon {
+  font-size: 1.5rem;
+  color: var(--accent-primary);
+  transition: all var(--transition-speed) ease;
+}
+
+.feature-card:hover .icon-wrapper {
+  background: var(--accent-primary);
+}
+
+.feature-card:hover .feature-icon {
+  color: white;
+  transform: scale(1.1);
+}
+
+.feature-card h3 {
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.feature-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE FEATURES */
+@media (max-width: 768px) {
+  .features {
+    padding: 80px 20px;
+  }
+
+  .features-section-title {
+    font-size: 2rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .feature-card {
+    align-items: center;
+    text-align: center;
+    padding: 30px 24px;
+  }
+
+  .icon-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

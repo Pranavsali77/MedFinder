@@ -1,0 +1,79 @@
+.profile-layout .profile-content {
+  display: flex;
+  gap: 3rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.profile-avatar-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  min-width: 250px;
+}
+
+.profile-avatar-section .avatar-icon {
+  font-size: 8rem;
+  color: var(--primary-color);
+  background: var(--bg-secondary);
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+.profile-avatar-section h4 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.profile-avatar-section p {
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.profile-details-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 300px;
+}
+
+.profile-details-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.profile-details-form label {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.profile-input {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.profile-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+textarea.profile-input {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.profile-details-form .btn-primary {
+  align-self: flex-start;
+  margin-top: 1rem;
+  opacity: 0.7;
+  cursor: not-allowed;
+}

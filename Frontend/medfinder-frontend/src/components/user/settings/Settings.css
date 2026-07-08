@@ -1,0 +1,103 @@
+.settings-layout .settings-content {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.settings-menu {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.settings-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.settings-item:hover {
+  border-color: var(--primary-color);
+}
+
+.settings-item.active {
+  border-color: var(--primary-color);
+  background: rgba(0, 242, 254, 0.05);
+}
+
+.settings-item-icon {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.settings-item-text h4 {
+  margin: 0 0 0.2rem 0;
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.settings-item-text p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.settings-panel {
+  flex: 2;
+  min-width: 300px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.settings-panel h4 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+.settings-panel .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.settings-panel label {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.settings-panel input {
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.settings-panel input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.settings-panel .btn-primary {
+  align-self: flex-start;
+  margin-top: 1rem;
+}

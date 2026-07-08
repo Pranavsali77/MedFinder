@@ -1,0 +1,292 @@
+/* ==========================================================================
+   📋 MEDFINDER MODULAR USER RESERVATION STYLES
+   ========================================================================== */
+
+.no-reservations-state {
+  text-align: center;
+  color: var(--text-muted, rgba(255, 255, 255, 0.4));
+  padding: 50px 20px;
+  max-width: 340px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  opacity: 0.7;
+}
+
+.empty-icon {
+  font-size: 40px;
+  color: var(--border-color, rgba(255, 255, 255, 0.08));
+}
+
+.no-reservations-state h4 {
+  font-size: 16px;
+  color: var(--text-primary, #ffffff);
+}
+
+.reservations-detailed-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.detailed-reservation-card {
+  border-radius: var(--border-radius-md, 16px);
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+  background: var(--bg-primary, rgba(18, 18, 24, 0.4));
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.res-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+  padding-bottom: 16px;
+}
+
+.res-meta-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.res-id {
+  font-family: var(--font-heading, "Outfit", sans-serif);
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text-primary, #ffffff);
+}
+
+.res-date {
+  font-size: 11px;
+  color: var(--text-muted, rgba(255, 255, 255, 0.4));
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Visual timeline layout flow */
+.timeline-progress-flow {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.flow-step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted, rgba(255, 255, 255, 0.4));
+  position: relative;
+}
+
+.flow-step .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border-color, rgba(255, 255, 255, 0.08));
+}
+
+.flow-step.active {
+  color: var(--accent-primary, #00f2fe);
+}
+
+.flow-step.active .dot {
+  background: var(--accent-primary, #00f2fe);
+  box-shadow: 0 0 6px var(--accent-primary, #00f2fe);
+}
+
+/* Connecting line effect */
+.flow-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 1px;
+  background: var(--border-color, rgba(255, 255, 255, 0.08));
+}
+
+.flow-step.active:not(:last-child)::after {
+  background: var(--accent-primary, #00f2fe);
+}
+
+.res-card-middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .res-card-middle {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+.med-info-box h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary, #ffffff);
+  margin-bottom: 4px;
+}
+
+.med-info-box p {
+  font-size: 12px;
+  color: var(--text-secondary, rgba(255, 255, 255, 0.6));
+}
+
+.qty-price-box {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.price-item {
+  font-size: 14px;
+  color: var(--text-secondary, rgba(255, 255, 255, 0.6));
+}
+
+.price-item strong {
+  font-family: var(--font-heading, "Outfit", sans-serif);
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text-primary, #ffffff);
+}
+
+.res-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-secondary, rgba(30, 30, 40, 0.5));
+  padding: 14px 20px;
+  border-radius: var(--border-radius-sm, 10px);
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .res-card-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 16px;
+  }
+}
+
+.pickup-notice {
+  font-size: 11px;
+  color: var(--text-muted, rgba(255, 255, 255, 0.4));
+  max-width: 60%;
+}
+
+@media (max-width: 768px) {
+  .pickup-notice {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+.footer-actions {
+  display: flex;
+  gap: 12px;
+}
+
+@media (max-width: 480px) {
+  .footer-actions {
+    flex-direction: column;
+  }
+}
+
+.cancel-btn {
+  padding: 8px 16px;
+  font-size: 12px;
+  border-radius: var(--border-radius-sm, 10px);
+}
+
+.cancel-btn:hover {
+  color: #ff5252;
+  border-color: rgba(239, 68, 68, 0.2);
+}
+
+.ticket-btn {
+  padding: 8px 16px;
+  font-size: 12px;
+  border-radius: var(--border-radius-sm, 10px);
+}
+
+.res-payment-badge-box {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.res-payment-badge-box .badge-item {
+  font-size: 11px;
+  color: var(--text-secondary, rgba(255, 255, 255, 0.6));
+}
+
+.res-payment-badge-box .badge-item strong {
+  color: var(--text-primary, #ffffff);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.res-payment-badge-box .status-badge strong {
+  background: rgba(255, 179, 0, 0.08);
+  color: #ffb300;
+  border: 1px solid rgba(255, 179, 0, 0.15);
+}
+
+.res-payment-badge-box .status-badge.success strong {
+  background: rgba(0, 230, 118, 0.08);
+  color: #00e676;
+  border: 1px solid rgba(0, 230, 118, 0.15);
+}
+
+.invoice-btn {
+  background: rgba(0, 242, 254, 0.06);
+  border: 1px solid rgba(0, 242, 254, 0.15);
+  color: #00f2fe;
+  padding: 8px 16px;
+  font-size: 12px;
+  border-radius: var(--border-radius-sm, 10px);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.invoice-btn:hover {
+  background: rgba(0, 242, 254, 0.12);
+  border-color: #00f2fe;
+  box-shadow: 0 0 10px rgba(0, 242, 254, 0.15);
+}
+
+.cancelled-timeline-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.cancelled-timeline-indicator .status-dot.cancelled {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ff5252;
+  box-shadow: 0 0 8px #ff5252;
+}
+
+.cancelled-timeline-indicator .cancelled-text {
+  color: #ff5252;
+}

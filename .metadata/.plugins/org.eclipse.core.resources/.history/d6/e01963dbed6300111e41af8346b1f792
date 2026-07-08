@@ -1,0 +1,33 @@
+
+spring.datasource.url=jdbc:postgresql://aws-1-ap-south-1.pooler.supabase.com:5432/postgres?sslmode=require
+spring.datasource.username=postgres.eylvhteuoarbxxuibrij
+spring.datasource.password=MedFinder533
+
+spring.datasource.driver-class-name=org.postgresql.Driver
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+
+spring.jackson.deserialization.fail-on-null-for-primitives=false
+
+openfda.api.key=wt3CUTGsDncclAf3yP4QRSI5us5hom4gDD8tTy2P
+
+# ===============================
+# SERVER
+# ===============================
+
+server.port=8080
+
+
+spring.mail.host=smtp.gmail.com
+spring.mail.port=587
+spring.mail.username=pksali45@gmail.como
+spring.mail.password=umjhqzksaurroimt
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
+spring.mail.properties.mail.smtp.ssl.trust=smtp.gmail.com
+
+
+# AI Integration Settings
+ai.openrouter.api.key=YOUR_OPENROUTER_KEY_HERE
+ai.openrouter.model=google/gemini-2.5-flash

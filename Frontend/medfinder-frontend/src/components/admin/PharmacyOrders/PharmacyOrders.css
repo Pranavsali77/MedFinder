@@ -1,0 +1,164 @@
+/* Pharmacy Orders Layout & Animation */
+.tab-layout {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Card Header Styles */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.card-icon {
+  font-size: 20px;
+  color: var(--accent-primary);
+}
+
+.card-header h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.card-subtext {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-select {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  outline: none;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+}
+
+.filter-select:focus {
+  border-color: var(--accent-primary);
+}
+
+/* Loading and Empty States */
+.loading-state {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 40px;
+  font-size: 14px;
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.empty-icon {
+  font-size: 48px;
+  color: var(--border-color);
+}
+
+/* Table Responsive Container */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  text-align: left;
+}
+
+.admin-table th {
+  padding: 12px 16px;
+  color: var(--text-muted);
+  font-weight: 700;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.admin-table td {
+  padding: 16px;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+.admin-table tbody tr:hover {
+  background: rgba(148, 163, 184, 0.03);
+}
+
+/* Status Badges */
+.status-badge {
+  font-size: 9px;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.status-badge.delivery {
+  background: rgba(155, 89, 182, 0.1);
+  color: #9b59b6;
+}
+
+.status-badge.pickup {
+  background: rgba(230, 126, 34, 0.1);
+  color: #e67e22;
+}
+
+.status-badge.placed { background: rgba(37, 99, 235, 0.1); color: var(--accent-primary); }
+.status-badge.confirmed { background: rgba(14, 165, 233, 0.1); color: var(--accent-secondary); }
+.status-badge.shipped { background: rgba(245, 158, 11, 0.1); color: var(--color-warning); }
+.status-badge.out_for_delivery { background: rgba(230, 126, 34, 0.1); color: #e67e22; }
+.status-badge.ready_for_pickup { background: rgba(16, 185, 129, 0.1); color: var(--color-success); }
+.status-badge.delivered { background: rgba(16, 185, 129, 0.1); color: var(--color-success); }
+.status-badge.cancelled { background: rgba(239, 68, 68, 0.1); color: var(--color-danger); }
+
+/* Dropdown Status Selector */
+.status-select {
+  padding: 6px 12px;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: 12px;
+  outline: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all var(--transition-speed) ease;
+}
+
+.status-select:focus {
+  border-color: var(--accent-primary);
+}

@@ -1,0 +1,52 @@
+package com.medfinder.medfinder_backend;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.jdbc.core.JdbcTemplate;
+
+@SpringBootApplication
+public class MedfinderBackendApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(MedfinderBackendApplication.class, args);
+		System.out.println("Hello");
+	}
+
+	@Bean
+	public CommandLineRunner cleanDatabaseAndEnforceUniqueness(JdbcTemplate jdbcTemplate) {
+		return args -> {
+			try {
+				// Drop the restricting check constraints first (as described in history)
+				jdbcTemplate.execute("ALTER TABLE payment DROP CONSTRAINT IF EXISTS payment_method_check");
+				jdbcTemplate.execute("ALTER TABLE payment DROP CONSTRAINT IF EXISTS payment_status_check");
+				jdbcTemplate.execute("ALTER TABLE order_status_history DROP CONSTRAINT IF EXISTS order_status_history_status_check");
+				jdbcTemplate.execute("ALTER TABLE orders DROP CONSTRAINT IF EXISTS orders_status_check");
+				jdbcTemplate.execute("ALTER TABLE orders DROP CONSTRAINT IF EXISTS orders_order_type_check");
+				System.out.println("Dropped check constraints successfully.");
+
+				// 1. Remove duplicate users (keep the oldest one)
+				jdbcTemplate.execute("DELETE FROM users a USING users b WHERE a.id > b.id AND a.email = b.email");
+				System.out.println("Cleaned user duplicates.");
+
+				// 2. Remove duplicate pharmacies (keep the oldest one)
+				jdbcTemplate.execute("DELETE FROM pharmacy a USING pharmacy b WHERE a.id > b.id AND a.email = b.email");
+				System.out.println("Cleaned pharmacy duplicates.");
+
+				// 3. Add UNIQUE constraint to users(email)
+				jdbcTemplate.execute("ALTER TABLE users DROP CONSTRAINT IF EXISTS unique_user_email");
+				jdbcTemplate.execute("ALTER TABLE users ADD CONSTRAINT unique_user_email UNIQUE (email)");
+				System.out.println("Enforced unique email constraint on users.");
+
+				// 4. Add UNIQUE constraint to pharmacy(email)
+				jdbcTemplate.execute("ALTER TABLE pharmacy DROP CONSTRAINT IF EXISTS unique_pharmacy_email");
+				jdbcTemplate.execute("ALTER TABLE pharmacy ADD CONSTRAINT unique_pharmacy_email UNIQUE (email)");
+				System.out.println("Enforced unique email constraint on pharmacy.");
+
+			} catch (Exception e) {
+				System.err.println("Error enforcing unique constraints/cleaning database: " + e.getMessage());
+			}
+		};
+	}
+}

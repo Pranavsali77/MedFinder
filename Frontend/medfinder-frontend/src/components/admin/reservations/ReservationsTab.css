@@ -1,0 +1,206 @@
+/* ==========================================================================
+   RESERVATIONS TAB SPECIFIC STYLES
+   ========================================================================== */
+.full-widget {
+  width: 100%;
+}
+
+.reservations-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  text-align: left;
+}
+
+.reservations-table th {
+  padding: 12px 16px;
+  color: var(--text-muted);
+  font-weight: 700;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.reservations-table td {
+  padding: 16px;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+.reservations-table tbody tr:hover {
+  background: rgba(148, 163, 184, 0.03);
+}
+
+.patient-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.patient-cell .p-name {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.patient-cell .p-email {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.color-primary {
+  color: var(--accent-primary) !important;
+}
+
+.muted-text {
+  color: var(--text-muted);
+}
+
+/* Action control buttons */
+.complete-pickup-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--color-success);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: var(--border-radius-sm);
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.complete-pickup-btn:hover {
+  background: #059669;
+  transform: translateY(-1px);
+}
+
+.cancel-pickup-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--border-color);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.cancel-pickup-btn:hover {
+  color: var(--color-danger);
+  border-color: rgba(239, 68, 68, 0.2);
+  background: rgba(239, 68, 68, 0.05);
+}
+
+.action-buttons-group {
+  display: flex;
+  gap: 8px;
+}
+
+.empty-text {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 13px;
+  padding: 30px 0;
+}
+
+/* Payment Badges */
+.payment-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.payment-method-badge {
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 3px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  text-transform: uppercase;
+  display: inline-block;
+  align-self: flex-start;
+  letter-spacing: 0.5px;
+}
+
+.payment-method-badge.upi {
+  color: #00f2fe;
+  background: rgba(0, 242, 254, 0.04);
+  border-color: rgba(0, 242, 254, 0.15);
+}
+
+.payment-method-badge.card {
+  color: #c77dff;
+  background: rgba(199, 125, 255, 0.04);
+  border-color: rgba(199, 125, 255, 0.15);
+}
+
+.payment-method-badge.cod {
+  color: #ffb300;
+  background: rgba(255, 179, 0, 0.04);
+  border-color: rgba(255, 179, 0, 0.15);
+}
+
+.payment-status-text {
+  font-size: 11px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.payment-status-text.pending {
+  color: #ffb300;
+}
+
+.payment-status-text.success {
+  color: #00e676;
+}
+
+.verify-payment-btn {
+  background: rgba(0, 242, 254, 0.08);
+  border: 1px solid rgba(0, 242, 254, 0.2);
+  color: #00f2fe;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  align-self: flex-start;
+}
+
+.verify-payment-btn:hover {
+  background: rgba(0, 242, 254, 0.15);
+  border-color: #00f2fe;
+}
+
+.verify-payment-btn.cod {
+  background: rgba(255, 179, 0, 0.08);
+  border-color: rgba(255, 179, 0, 0.25);
+  color: #ffb300;
+}
+
+.verify-payment-btn.cod:hover {
+  background: rgba(255, 179, 0, 0.15);
+  border-color: #ffb300;
+}
+
+.awaiting-payment-text {
+  font-size: 11px;
+  font-weight: 700;
+  color: #ffb300;
+  background: rgba(255, 179, 0, 0.04);
+  border: 1px solid rgba(255, 179, 0, 0.15);
+  padding: 6px 10px;
+  border-radius: var(--border-radius-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+

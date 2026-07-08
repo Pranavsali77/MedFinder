@@ -1,0 +1,118 @@
+{
+	"info": {
+		"name": "MedFinder API",
+		"description": "API collection for testing the Medicine Availability System endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Medicines",
+			"item": [
+				{
+					"name": "Search Exact Medicines",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/medicines/search?query=Paracetamol",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"medicines",
+								"search"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "Paracetamol"
+								}
+							]
+						}
+					}
+				},
+				{
+					"name": "Search by Disease",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/medicines/disease-search?query=Fever",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"medicines",
+								"disease-search"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "Fever"
+								}
+							]
+						}
+					}
+				},
+				{
+					"name": "Get Alternatives Inventory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/medicines/alternatives-inventory?name=ibuprofen",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"medicines",
+								"alternatives-inventory"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "ibuprofen"
+								}
+							]
+						}
+					}
+				},
+				{
+					"name": "AI Suggest",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/medicines/ai-suggest?query=Paracetamol",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"medicines",
+								"ai-suggest"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "Paracetamol"
+								}
+							]
+						}
+					}
+				}
+			]
+		}
+	]
+}
